@@ -54,7 +54,7 @@ const Camera:FC<CameraProps> = ({setCamera, setResult, restart}) => {
         }
         const image: string = picture.toDataURL('image/jpeg');
         try {
-            const response = await axios.post('/process', { picture: image });
+            const response = await axios.post('https://snapcyclev2backend.onrender.com/process', { picture: image });
             setResult(response.data.answer);
           } catch (error) {
             alert('Error with OpenAI API.')
