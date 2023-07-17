@@ -1,7 +1,16 @@
 .App {
   text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: normal;
+  
 }
 
+.main-title {
+  margin-top: 60px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: bold;
+
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +45,43 @@
     transform: rotate(360deg);
   }
 }
+
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #2E8B57; /* Darker green */
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #228B22; /* Dark green on hover */
+}
+
+.btn:active {
+  animation-name: moveButton;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveButton {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
